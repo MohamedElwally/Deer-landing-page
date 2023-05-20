@@ -81,6 +81,71 @@ header {
   color: #162938;
 }
 
+/* drop down menu styling */
+.dropdown_menu {
+  position: absolute;
+  color: white;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.toggle_btn {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: -55px;
+}
+
+.dropdown_menu a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.dropdown_menu .btnLogin-popup {
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.dropdown_menu .btnLogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+
+
 .wrapper {
   position: relative;
   width: 400px;
@@ -251,4 +316,24 @@ header {
 
 .loign-register p a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    display: none;
+  }
+
+  .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
